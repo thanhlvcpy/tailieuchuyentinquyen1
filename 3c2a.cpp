@@ -23,16 +23,14 @@ int main()
    cin>>n;
    for(int i=1;i<=n;i++)
         cin>>a[i];
-   int d=0;
-   for(int i=1;i<=n/2;i++){
+   for(int i=1;i<=n-1;i++){
         int j=0-a[i];
         if(binarySearch(j,1,n)>0){
-            cout<<i<<" "<<binarySearch(j,1,n)<<endl;
-            d++;
+              cout<<i<<" "<<binarySearch(j,1,n)<<endl;
+              return 0;
         }
    }
-   if(d==0)
-      cout<<"NOPE";
+   cout<<"NOPE";
 
     return 0;
 }
